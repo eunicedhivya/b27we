@@ -12,7 +12,6 @@ const app = express()
 const PORT = 4000;
 
 // mongoDB connection
-// const MONGO_URL = "mongodb://localhost"
 const MONGO_URL=process.env.MONGO_URL;
 async function createConnection(){
     const client = new MongoClient(MONGO_URL);
