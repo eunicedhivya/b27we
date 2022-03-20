@@ -1,6 +1,8 @@
 // const express = require('express')
 import express from "express";
+import fs from "fs";
 // import fs from "express";
+import path from 'path';
 // import bodyParser from "body-parser";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
@@ -9,7 +11,7 @@ console.log(process.env.MONGO_URL);
 const app = express()
 
 // Port for localhost
-const PORT = 4000;
+const PORT = process.env.PORT
 
 // mongoDB connection
 const MONGO_URL=process.env.MONGO_URL;
